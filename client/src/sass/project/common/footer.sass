@@ -1,0 +1,97 @@
+.footer
+  h: 195px
+  pa: 41px 0 30px
+  bg-color: #000
+
+.footer-top-content, .footer-bottom-content 
+  +d-justify
+
+.footer-top-content
+  &__
+    &left-part
+      d: flex
+      flex-direction: column
+      ai: flex-start
+      pr: 64px
+      border-right: 1px solid #2F2F2F
+    
+    &tel-block
+      +d-ai-center
+      mb: 17px
+
+    &image-wrapper
+      w: 14px
+      h: 20px
+      mr: 11px
+    
+    &call-block 
+      mb: 27px
+    
+    &call-button
+      +pointer
+      fs: 13px
+      fw: 400
+      color: #fff
+    
+    &right-part
+      d: flex
+      flex-direction: column
+      ai: flex-start
+      pl: 66px
+
+    &top-block
+      pb: 35px
+      br-bottom: 1px solid #2F2F2F
+
+.payment-block
+  +d-ai-center
+
+  &__
+    &image-wrapper
+      d: block
+      h: 32px
+      mr: 11px
+
+.footer-bottom-content 
+  pt: 35px
+  w: 100%
+
+.schedule-block, .mail-block
+  +d-ai-center
+  &__
+    &image-wrapper
+      +cube(20px)
+      mr: 12px
+
+.schedule-block
+  mr: 54px
+
+.social-block
+  ml: auto
+
+.social-block-content 
+  +d-ai-center
+
+  &__
+    &image-wrapper
+      d: block
+      +cube(18px)
+      ml: 10px
+      +tr
+
+      &:last-child
+        mr: 0
+      
+      @media (hover: hover) and (pointer: fine)
+        &:hover
+          trans: scale(1.1)
+    
+    &text
+      mr: 12px
+
+.copyright-section
+  bg-color: #2F2F2F
+
+.copyright
+  h: 57px
+  +d-justify

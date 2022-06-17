@@ -1,0 +1,371 @@
+include ../../mixins/index
+
+-
+  const products = [
+
+    {
+      img: '1.png',
+      alt: '1',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '1'
+        },
+        {
+          name: '45',
+          link: '2'
+        },
+        {
+          name: '48',
+          link: '3'
+        },
+      ]
+    },
+
+    {
+      img: '2.png',
+      alt: '2',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+
+    {
+      img: '3.png',
+      alt: '3',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+
+    {
+      img: '4.png',
+      alt: '4',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '5.png',
+      alt: '5',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '6.png',
+      alt: '6',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '7.png',
+      alt: '7',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '8.png',
+      alt: '8',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '9.png',
+      alt: '9',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '10.png',
+      alt: '10',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '11.png',
+      alt: '11',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '12.png',
+      alt: '12',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '13.png',
+      alt: '13',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '14.png',
+      alt: '14',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '15.png',
+      alt: '15',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+    {
+      img: '16.png',
+      alt: '16',
+      title: 'Кроссовки Bona мужские',
+      price: '1350 грн',
+      oldPrice: '1400 грн',
+      sizes: [
+        {
+          name: '41',
+          link: '#'
+        },
+        {
+          name: '42',
+          link: '#'
+        },
+        {
+          name: '43',
+          link: '#'
+        },
+      ]
+    },
+  ]
+
++b.products-list-section.SECTION
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.product-list
+      +e.title.title.H2 Популярные товары
+
+      +e.list.g-row.g-row--justify_between
+        each product in products
+          +b.product-card
+            +e.image-part
+              +e.image-wrapper.A(href='#')
+                +e.image.img.IMG(
+                  src!= '../static/img/products/' + product.img
+                  alt!= product.alt
+                )
+              +b.product-hover-bar
+                +e.list.UL
+                  each item in product.sizes
+                    +e.item.link.--hover.LI
+                      +e.link.A(href!= item.link)= item.name
+
+            +e.title-block
+              +e.title.link.--lg.--black.--medium.--hover.A(href='#')= product.title
+            +b.price-block
+              +e.price.link.--black.--bold.SPAN= product.price
+              +e.old-price.SPAN= product.oldPrice

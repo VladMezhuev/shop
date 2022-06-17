@@ -1,0 +1,78 @@
+include ../../mixins/index
+
++b.footer.FOOTER
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.footer-top-content
+      +e.left-part 
+        +e.tel-block 
+          +e.image-wrapper 
+            +e.image.img.IMG(
+              src='../static/img/smartphone.svg'
+              alt='telephone'
+            )
+          +e.number.link.--xl.--white.--hover.A(href='tel:+3805685500') +380 568 55 00
+        +e.call-block 
+          +e.call-button.link.--hover.--white.SPAN Перезвонить мне
+        +b.payment-block
+          +e.image-wrapper.A(href='#') 
+            +e.image.img.IMG(
+              src='../static/img/visa.png'
+              alt='visa'
+            )
+          +e.image-wrapper.A(href='#') 
+            +e.image.img.IMG(
+              src='../static/img/master.png'
+              alt='master'
+            )
+      +e.right-part
+        +e.top-block
+          +b.menu.NAV
+            +e.list.UL
+              +e.footer-item.LI
+                +e.footer-link.link.--white.--bold.--md.--hover.A(href='#') Политика конфиденциальности
+              +e.footer-item.LI
+                +e.footer-link.link.--white.--bold.--md.--hover.A(href='#') О магазине
+              +e.footer-item.LI  
+                +e.footer-link.link.--white.--bold.--md.--hover.A(href='#') Оплата и доставка
+              +e.footer-item.LI
+                +e.footer-link.link.--white.--bold.--md.--hover.A(href='#') Контакты
+              +e.footer-item.LI
+                +e.footer-link.link.--white.--bold.--md.--hover.A(href='#') Условия возврата
+        
+        +b.footer-bottom-content 
+          +b.schedule-block 
+            +e.image-wrapper 
+              +e.image.img.IMG(
+                src='../static/img/clock.svg'
+                alt='clock'
+              )
+            +e.text.link.--white.--md.P Пн.-Пт. 8:00 - 18:00 Сб.-Вс. - Выходной
+
+          +b.mail-block 
+            +e.image-wrapper 
+              +e.image.img.IMG(
+                src='../static/img/mail.svg'
+                alt='mail'
+              )
+            +e.link.link.--white.--md.--hover.A(href='mailto:mail@mail.com') mail@mail.com
+          
+          +b.social-block
+            +b.social-block-content 
+              +e.text.link.--md.--white.P Мы в социальных сетях:
+              +e.image-wrapper.A(href='#')
+                +e.image.img.IMG(
+                  src='../static/img/inst.svg'
+                  alt='inst'
+                )
+              +e.image-wrapper.A(href='#')
+                +e.image.img.IMG(
+                  src='../static/img/facebook.svg'
+                  alt='clock'
+                )
+
+
++b.copyright-section.SECTION
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.copyright
+      +e.text.link.--sm.--darkgrey.P © Copyright 2022
+      +e.devlink.link.--sm.--darkgrey.--hover.A(href='#') Сайт разработан компанией: WEBCASE

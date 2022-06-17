@@ -1,0 +1,45 @@
+=bg-color
+  bg: rgba(255, 255, 255, .4)
+  br-radius: 5px
+
+=form-reset
+  br: none
+  outline: none
+
+=inputStyle
+  +bg-color
+  pa: 0 10px
+  +form-reset
+  fs: 14px
+  color: black
+
+=d-ai-center
+  d: flex
+  ai: center
+
+=d-justify
+  +d-ai-center
+  jc: space-between
+
+=d-center
+  +d-ai-center
+  jc: center
+
+=f-size
+  w: 100%
+  h: 100%
+
+=hover
+  @media (hover: hover) and (pointer: fine)
+    &:hover
+      @content
+
+=tr
+  transition: all 0.3s linear
+
+=pointer
+  cursor: pointer
+
+=cube($w, $h: $w)
+  w: $w
+  h: $h

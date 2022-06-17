@@ -1,0 +1,74 @@
+.products-list-section
+  pa: 98px 0 70px
+  bg-color: white
+
+.product-list
+  &__
+    &title
+      mb: 46px
+
+.product-card
+  +d-ai-center
+  flex-direction: column
+  mb: 50px
+
+  &__
+    &image-part
+      h: 270px
+      pos: relative
+      mb: 10px
+      z-index: 1
+
+      +hover
+        .product-hover-bar
+          h: 43px
+          &__
+            &item
+              fs: 10px
+
+    &image-wrapper
+      d: block
+      w: 100%
+      h: 100%
+      z-index: 2
+
+    &title-block
+      mb: 14px
+
+.price-block
+  +d-center
+
+  &__
+    &price
+      mr: 17px
+      fs: 19px
+
+    &old-price
+      fs: 13px
+      fw: 400
+      color: rgba(0, 0, 0, .4)
+      td: line-through
+
+.product-hover-bar
+  pos: absolute
+  bottom: 0%
+  left: 0
+  w: 100%
+  h: 0px
+  bg-color: rgba(0, 0, 0, .41)
+  z-index: 5
+  +d-center
+  +tr
+
+  &__
+    &list
+      +d-ai-center
+
+    &item
+      fs: 0px
+      fw: 700
+      color: white
+      +tr
+
+      &:not(&:last-child)
+        mr: 27px

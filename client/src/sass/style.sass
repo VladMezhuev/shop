@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap')
+@import "framework"
+@import project
+
+.g-container
+  pa: 0 15px
+
+.g-row
+  ml: 0px
+  mr: 0px
+
+html, body
+  color: #DADADA
+  h: 100%
+  ff: 'Montserrat', sans-serif
+
+#app
+  d: flex
+  flex-direction: column
+  min-height: 100%
+
+main
+  flex: 1 1 auto
+
+a
+  d: inline-block
+  td: none
+  color: inherit
+
+.img
+  d: block
+  w: 100%
+  h: 100%
+  object-fit: cover
+  object-position: center
+
+.text
+  fs: 13px
+  fw: 500
+
+.pos-rel
+  pos: relative
+
+.btn
+  w: 234px
+  h: 50px
+  br: none
+  bg-color: black
+  color: white
+  ff: 'Raleway', sans-serif
+  fs: 15px
+  fw: 700
+  +d-center
+  +pointer
+  +tr
+
+  &--
+    &sm
+      w: 201px
+
+  +hover
+    bg-color: #1c1b1b

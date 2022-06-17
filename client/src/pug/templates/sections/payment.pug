@@ -1,0 +1,72 @@
+include ../../mixins/index
+
+-
+  const paymentCards = [
+    {
+      title: 'ДОСТАВКА',
+      desc: 'Но дальнейшее развитие различных форм деятельности способствует'
+    },
+    {
+      title: 'Оплата',
+      desc: 'Но дальнейшее развитие различных форм деятельности способствует'
+    },
+    {
+      title: 'Возврат',
+      desc: 'Но дальнейшее развитие различных форм деятельности способствует'
+    },
+  ]
+
+  const benefitsCards = [
+    {
+      title: 'ВОЗВРАТ ТОВАРОВ',
+      text: 'в течение 14 дней',
+      img: '1.png',
+      alt: '1'
+    },
+    {
+      title: 'ГАРАНТИЯ',
+      text: 'качества',
+      img: '2.png',
+      alt: '2'
+    },
+    {
+      title: 'СЛУЖБА ПОДДЕРЖКИ',
+      text: 'через форму на сайте',
+      img: '3.png',
+      alt: '3'
+    }, {
+      title: 'АКЦИИ И СКИДКИ',
+      text: 'регулярные кампании',
+      img: '4.png',
+      alt: '4'
+    }
+  ]
+
++b.payment-section.SECTION
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+
+    +b.payment
+      +e.title.title.H2 Условия оплаты, доставки и возврата
+
+      +e.terms-card-list.g-row.g-row--justify_between
+        each elem, i in paymentCards
+          +b.terms-card.g-cell.g-cols--12.--6-md.--4-xl
+            +e.content
+              +e.number-block
+                +e.number.SPAN= i + 1
+              +e.title-block
+                +e.title.title.--md.--lh.--upper.H3= elem.title
+              +e.text.link.--dark.--md.P= elem.desc
+      +e.benefits-card-list.g-row.g-row--justify_between
+        each card in benefitsCards
+          +b.benefits-card
+            +e.content.g-row.g-row--align_center
+              +e.image-wrapper
+                +e.image.img.IMG(
+                  src!='../static/img/' + card.img
+                  alt!=card.alt
+                )
+              +e.text-part
+                +e.title.link.--md.--upper.--black.--bold.H4= card.title
+                +e.desc.link.--black.--medium.P= card.text
+

@@ -1,0 +1,202 @@
+include ../../mixins/index
+-
+  const menuItems = [
+    {
+      name: 'Одежда',
+      link: '#',
+      color: '#000',
+      sublist: [
+        {
+          category: 'Мужская одежда',
+          submenu: [
+            {
+              name: 'Кофты',
+              link: '#'
+            },
+            {
+              name: 'Штаны',
+              link: '#'
+            },
+            {
+              name: 'Футболки',
+              link: '#'
+            }
+          ]
+        },
+        {
+          category: 'Женская одежда',
+          submenu: [
+            {
+              name: 'Кофты',
+              link: '#'
+            },
+            {
+              name: 'Штаны',
+              link: '#'
+            },
+            {
+              name: 'Футболки',
+              link: '#'
+            }
+          ]
+        },
+      ]
+    },
+    {
+      name: 'Обувь',
+      link: '#',
+      color: '#000',
+      sublist: [
+        {
+          category: 'Мужская обувь',
+          submenu: [
+            {
+              name: 'Кроссовки',
+              link: '#'
+            },
+            {
+              name: 'Кеды',
+              link: '#'
+            },
+            {
+              name: 'Туфли',
+              link: '#'
+            },
+          ]
+        },
+        {
+          category: 'Женская обувь',
+          submenu: [
+            {
+              name: 'Кроссовки',
+              link: '#'
+            },
+            {
+              name: 'Кеды',
+              link: '#'
+            },
+            {
+              name: 'Туфли',
+              link: '#'
+            },
+          ]
+        },
+      ]
+    },
+    {
+      name: 'Рапродажа',
+      color: '#000',
+      link: '#'
+    },
+    {
+      name: 'Супер предложения',
+      link: '#',
+      color: '#558BDC'
+    }
+  ]
+
++b.header.HEADER
+  +b.header-top
+
+    +b.telephone-block
+      +b.number-block
+        +e.list.UL
+          +e.item.is-active.LI
+            +e.link.A(href='tel:0674450300') 067 445 03 01
+          //- +e.item.LI
+          //-   +e.item.LI 067 445 03 01
+          //- +e.item.LI
+          //-   +e.item.LI 067 445 03 02
+        +e.image-wrapper
+          +e.image.img.IMG(
+            src='../static/img/Vector.svg'
+            alt='dropdown arrow'
+          )
+      +b.call-block
+        +e.image-wrapper
+          +e.image.IMG(
+            src='../static/img/smartphone.svg'
+            alt='telephone'
+          )
+        +e.button.link.--grey.--hover.SPAN Заказать звонок
+
+    +b.menu.NAV
+      +e.list.UL
+        +e.item.LI
+          +e.link.link.--grey.--hover.A(href='#') О магазине
+        +e.item.LI
+          +e.link.link.--grey.--hover.A(href='#') Оплата и доставка
+        +e.item.LI
+          +e.link.link.--grey.--hover.A(href='#') Дропшиппинг
+        +e.item.LI
+          +e.link.link.--grey.--hover.A(href='#') Контакты
+
+  +b.header-bottom
+    +b.logo
+      +e.image.img.IMG(
+        src='../static/img/logo.png'
+        alt='logo'
+      )
+    +b.menu-icon#js-trigger
+      +e.line.--top.SPAN
+      +e.line.--middle.SPAN
+      +e.line.--bottom.SPAN
+    +b.header-bottom-menu#js-menu.NAV
+      +e.list
+        //+e.qwe 1
+        //+e.qwe 1
+        //+e.qwe 1
+        each item in menuItems
+          if item.sublist
+            +e.item.js-menu-spoiler
+              +e.click-part
+                +e.link.link.--2md.--bold.A(
+                  href!=item.link
+                  style!='color: ' + item.color
+                )= item.name
+                +e.image-wrapper
+                  +e.image.img.IMG(
+                    src='../static/img/arrow.svg'
+                    alt='arrow'
+                  )
+              +b.submenu.js-submenu-spoiler
+                +e.list
+                  each subitem in item.sublist
+                    +e.column
+                      +e.category.title.--lg.SPAN= subitem.category
+                      +e.sublist
+                        each el in subitem.submenu
+                          +e.item
+                            +e.sublink.link.--lg.--medium.--black.--hover.A(href!=el.link)= el.name
+          else
+            +e.item
+              +e.link.link.--2md.--bold.--hover.A(
+                href!=item.link
+                style!='color: ' + item.color
+              )= item.name
+
+  //  +b.icons
+  //    +e.social-container
+  //      +e.soc-wrapper.A(href='#')
+  //        +e.image.img.IMG(
+  //          src='../static/img/menu-icons/inst.svg'
+  //          alt='inst'
+  //        )
+  //
+  //    +e.functional-container
+  //      +b.search-block
+  //        +e.image-wrapper.icon-wrapper
+  //          +e.image.img.IMG(
+  //            src='../static/img/menu-icons/search.svg'
+  //            alt='search'
+  //          )
+  //      +e.image-wrapper.icon-wrapper
+  //        +e.image.img.IMG(
+  //          src='../static/img/menu-icons/cart.svg'
+  //          alt='cart'
+  //        )
+  //      +e.image-wrapper.icon-wrapper.A(href='#')
+  //        +e.image.img.IMG(
+  //          src='../static/img/menu-icons/user.svg'
+  //          alt='user'
+  //        )

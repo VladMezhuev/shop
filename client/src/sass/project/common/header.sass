@@ -1,0 +1,295 @@
+.header
+  pos: fixed
+  top: 0
+  left: 0
+  w: 100%
+
+  +mq-md
+    pos: relative
+
+.header-top
+  w: 100%
+  h: 48px
+  pa: 0 10px
+  bg-color: black
+  +d-justify
+
+  +mq-lg
+    pa: 0 30px
+    +d-ai-center
+
+.telephone-block
+  w: 100%
+  +d-justify
+
+  +mq-md
+    w: auto
+    +d-ai-center
+
+.number-block
+  +d-ai-center
+  mr: 25px
+
+  +mq-lg
+    mr: 37px
+
+  &__
+    &item
+      fw: 700
+
+    &image-wrapper
+      w: 12px
+      h: 8px
+      pa: 2px
+      ml: 11px
+      +pointer
+
+.call-block
+  +pointer
+  +d-ai-center
+
+  &__
+    &image-wrapper
+      +cube(18px)
+      mr: 5px
+
+.menu
+  d: none
+  ml: auto
+
+  +mq-md
+    d: block
+
+  &__
+    &list
+      +d-ai-center
+
+    &item
+      mr: 25px
+
+      +mq-lg
+        mr: 33px
+
+      &:last-child
+        mr: 0
+
+    &footer-item
+      mr: 35px
+
+      &:last-child
+        mr: 0
+
+.header-bottom
+  pos: relative
+  w: 100%
+  h: 70px
+  +d-justify
+  pr: 10px
+  pl: 10px
+
+  +mq-lg
+    +d-ai-center
+    h: 104px
+    pr: 30px
+    pl: 30px
+
+.header-bottom-menu
+  pos: absolute
+  top: 100%
+  left: -100%
+  w: 100%
+  min-height: 100vh
+  height: 100%
+  bg-color: #EAEAEA
+  overflow: auto
+  +d-ai-center
+  +tr
+
+  &.is-active
+    left: 0
+  &__
+    &list
+      w: 100%
+      h: 100%
+      d: flex
+      ai: flex-start
+      flex-direction: column
+      pt: 80px
+      pl: 20px
+
+      +mq-lg
+        pt: 0
+        pl: 0
+        flex-direction: row
+
+    &image-wrapper
+      +cube(18px)
+      pa: 7px 6px
+      bg-color: #F3F3F3
+      br-radius: 50%
+      ml: 8px
+
+    &image
+      +tr
+
+    &item
+      pos: relative
+      mb: 40px
+      d: flex
+      ai: flex-start
+      flex-direction: column
+
+      +mq-lg
+        mb: 0
+        mr: 80px
+
+      +hover
+        .submenu
+          d: block
+
+        .header-bottom-menu
+          &__
+            &image
+              trans: rotate(180deg)
+
+    &click-part
+      +d-ai-center
+
+.submenu
+  d: none
+  pa: 10px
+  w: auto
+  bg-color: transparent
+
+  &.is-active
+    d: block
+
+  +mq-lg
+    pos: absolute
+    top: 100%
+    left: 0
+    z-index: 10
+    pa: 48px
+    bg-color: white
+
+
+  &__
+    &category
+      white-space: nowrap
+    &list
+      d: flex
+      flex-direction: column
+
+      +mq-lg
+        flex-direction: row
+
+    &column
+      d: flex
+      ai: flex-start
+      flex-direction: column
+      &:not(&:last-child)
+        mb: 15px
+
+      +mq-lg
+        &:not(&:last-child)
+          br-right: 1px solid #EAEAEA
+          pr: 61px
+          mb: 0
+
+        &:not(&:first-child)
+          pl: 65px
+
+    &sublist
+      mt: 0px
+      d: flex
+      flex-direction: column
+
+      +mq-lg
+        mt: 31px
+
+    &item
+      &:not(&:last-child)
+        mb: 10px
+        +mq-lg
+          mb: 30px
+
+
+.logo
+  w: 194px
+  h: 60px
+
+  +mq-lg
+    mr: 131px
+
+.icons
+  ml: auto
+  +d-ai-center
+
+  &__
+    &social-container
+      mr: 36px
+
+    &soc-wrapper
+      +cube(50px)
+      pa: 13px
+      bg-color: black
+      br-radius: 50%
+      +pointer
+
+    &functional-container
+      +d-ai-center
+
+    &image-wrapper
+      ml: 16px
+
+.icon-wrapper
+  +cube(50px)
+  br-radius: 50%
+  bg-color: #F3F3F3
+  pa: 16px
+  +pointer
+
+.menu-icon
+  pos: relative
+  d: block
+  w: 20px
+  h: 20px
+  mr: 15px
+
+  +mq-lg
+    d: none
+
+  &.is-active
+    .menu-icon
+      &__
+        &line
+          trans: scale(0)
+
+          &--top
+            trans: rotate(-45deg)
+            top: 9px
+
+          &--bottom
+            trans: rotate(45deg)
+            bottom: 8px
+
+
+  &__
+    &line
+      pos: absolute
+      w: 100%
+      h: 3px
+      bg-color: black
+      left: 0
+      tr: .3s
+      br-radius: 25%
+
+      &--top
+        top: 0
+
+      &--middle
+        top: 9px
+
+      &--bottom
+        bottom: 0
+

@@ -1,0 +1,75 @@
+.main-top-section
+  w: 100%
+  h: 663px
+
+  &__
+    &content
+      +d-justify
+      h: 100%
+
+    &left-part
+      w: 61.5%
+      h: 100%
+      mr: 6px
+
+    &right-part
+      w: 38.5%
+      h: 100%
+
+    &right-top
+      pb: 3px
+
+    &right-bottom
+      pt: 3px
+
+    &right-top, &right-bottom
+      w: 100%
+      h: 50%
+
+.banner-card
+  pos: relative
+  w: 100%
+  h: 100%
+  pt: 102px
+  pl: 103px
+  d: flex
+  jc: flex-start
+
+  &__
+    &image-wrapper
+      pos: absolute
+      top: 0
+      left: 0
+      w: 100%
+      h: 100%
+      z-index: 1
+
+    &title
+      mb: 26px
+
+    &text-part
+      pos: relative
+      z-index: 2
+      w: 437px
+
+      &--
+        &sm
+          w: 225px
+  .btn
+    mt: 106px
+  &--
+    &rev
+      jc: flex-end
+
+    &sm
+      pa: 53px 50px 20px 60px
+      .btn
+        mt: 94px
+
+
+.new-product-mark
+  pos: absolute
+  bottom: 65px
+  right: 50px
+  +cube(221px)
+  z-index: 2

@@ -1,0 +1,55 @@
+.payment-section
+  w: 100%
+  bg-color: #F0F2F5
+  pa: 67px 0 90px
+
+.payment
+
+  &__
+    &title
+      mb: 50px
+
+    &benefits-card-list
+      mt: 82px
+
+.terms-card
+  bg-color: white
+  pa: 43px 79px 44px 40px
+  max-width: 370px
+  pos: relative
+
+  &__
+    &number-block
+      pos: absolute
+      top: 50%
+      right: 40px
+      trans: translateY(-50%)
+      user-select: none
+
+    &number
+      ff: 'Oswald', sans-serif
+      fs: 120px
+      color: #F0F2F5
+
+
+    &title-block
+      pos: relative
+      pl: 17px
+      mb: 24px
+      // br-left: 3px solid #558BDC
+
+      &::before
+        content: ''
+        pos: absolute
+        top: -3px
+        left: 0
+        w: 3px
+        h: 21px
+        bg-color: #558BDC
+
+.benefits-card
+
+  &__
+    &image-wrapper
+      mr: 20px
+      +cube(90px)
