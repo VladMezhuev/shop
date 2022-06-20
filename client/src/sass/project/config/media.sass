@@ -1,19 +1,10 @@
-$mq-size-xl: 1122px !default
-$mq-size-mac: 1400px !default
+$mq-size-fhd: 1500px !default
 
-$mq-size-map: ('xl': $mq-size-xl)
-$mq-size-map: ('mac': $mq-size-mac)
+$mq-size-map: ('fhd': $mq-size-fhd)
 
-@mixin mq-xl
-  @media (map-get($mq-queries-from-map, 'xl'))
+@mixin mq-fhd
+  @media (map-get($mq-queries-from-map, 'fhd'))
     @content
-@mixin mq-till-xl
-  @media (map-get($mq-queries-till-map, 'xl'))
-    @content
-
-@mixin mq-mac
-  @media (map-get($mq-queries-from-map, 'mac'))
-    @content
-@mixin mq-till-mac
-  @media (map-get($mq-queries-till-map, 'mac'))
+@mixin mq-till-fhd
+  @media (map-get($mq-queries-till-map, 'fhd'))
     @content

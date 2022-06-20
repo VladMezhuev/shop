@@ -66,20 +66,25 @@ var _slicedToArray2 = _interopRequireDefault(__webpack_require__(12));
 var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(16));
 
 var menuIvents = function menuIvents() {
-  var MENU_TRIGGER = document.getElementById('js-trigger');
-  var MENU_LIST = document.getElementById('js-menu');
-  var MENU_ITEMS = (0, _toConsumableArray2["default"])(document.getElementsByClassName('js-menu-spoiler'));
-  MENU_TRIGGER.addEventListener('click', function () {
-    MENU_TRIGGER.classList.toggle('is-active');
-    MENU_LIST.classList.toggle('is-active');
+  var menuTrigger = document.getElementById('js-trigger');
+  var menuList = document.getElementById('js-menu');
+  var menuItems = (0, _toConsumableArray2["default"])(document.getElementsByClassName('js-menu-spoiler'));
+  menuTrigger.addEventListener('click', function () {
+    menuTrigger.classList.toggle('is-active');
+    menuList.classList.toggle('is-active');
   });
-  MENU_ITEMS.forEach(function (item) {
+  menuItems.forEach(function (item) {
     var _item$getElementsByCl = item.getElementsByClassName('js-submenu-spoiler'),
         _item$getElementsByCl2 = (0, _slicedToArray2["default"])(_item$getElementsByCl, 1),
-        SPOILER_MENU = _item$getElementsByCl2[0];
+        spoilerMenu = _item$getElementsByCl2[0];
 
     item.addEventListener('click', function () {
-      SPOILER_MENU.classList.toggle('is-active');
+      spoilerMenu.classList.toggle('is-active');
+    });
+    item.addEventListener('mouseleave', function () {
+      if (spoilerMenu.classList.contains('is-active')) {
+        spoilerMenu.classList.remove('is-active');
+      }
     });
   });
 };

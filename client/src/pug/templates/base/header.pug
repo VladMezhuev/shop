@@ -142,61 +142,77 @@ include ../../mixins/index
       +e.line.--middle.SPAN
       +e.line.--bottom.SPAN
     +b.header-bottom-menu#js-menu.NAV
-      +e.list
-        //+e.qwe 1
-        //+e.qwe 1
-        //+e.qwe 1
-        each item in menuItems
-          if item.sublist
-            +e.item.js-menu-spoiler
-              +e.click-part
-                +e.link.link.--2md.--bold.A(
+      +e.wrapper
+        +e.list
+          each item in menuItems
+            if item.sublist
+              +e.item.js-menu-spoiler
+                +e.click-part
+                  +e.link.link.--2md.--bold.A(
+                    href!=item.link
+                    style!='color: ' + item.color
+                  )= item.name
+                  +e.image-wrapper
+                    +e.image.img.IMG(
+                      src='../static/img/arrow.svg'
+                      alt='arrow'
+                    )
+                +b.submenu.js-submenu-spoiler
+                  +e.list
+                    each subitem in item.sublist
+                      +e.column
+                        +e.category.title.--lg.SPAN= subitem.category
+                        +e.sublist
+                          each el in subitem.submenu
+                            +e.item
+                              +e.sublink.link.--lg.--medium.--black.--hover.A(href!=el.link)= el.name
+            else
+              +e.item
+                +e.link.link.--2md.--bold.--hover.A(
                   href!=item.link
                   style!='color: ' + item.color
                 )= item.name
-                +e.image-wrapper
-                  +e.image.img.IMG(
-                    src='../static/img/arrow.svg'
-                    alt='arrow'
-                  )
-              +b.submenu.js-submenu-spoiler
-                +e.list
-                  each subitem in item.sublist
-                    +e.column
-                      +e.category.title.--lg.SPAN= subitem.category
-                      +e.sublist
-                        each el in subitem.submenu
-                          +e.item
-                            +e.sublink.link.--lg.--medium.--black.--hover.A(href!=el.link)= el.name
-          else
-            +e.item
-              +e.link.link.--2md.--bold.--hover.A(
-                href!=item.link
-                style!='color: ' + item.color
-              )= item.name
 
-  //  +b.icons
-  //    +e.social-container
-  //      +e.soc-wrapper.A(href='#')
-  //        +e.image.img.IMG(
-  //          src='../static/img/menu-icons/inst.svg'
-  //          alt='inst'
-  //        )
-  //
-  //    +e.functional-container
-  //      +b.search-block
-  //        +e.image-wrapper.icon-wrapper
-  //          +e.image.img.IMG(
-  //            src='../static/img/menu-icons/search.svg'
-  //            alt='search'
-  //          )
-  //      +e.image-wrapper.icon-wrapper
-  //        +e.image.img.IMG(
-  //          src='../static/img/menu-icons/cart.svg'
-  //          alt='cart'
-  //        )
-  //      +e.image-wrapper.icon-wrapper.A(href='#')
-  //        +e.image.img.IMG(
-  //          src='../static/img/menu-icons/user.svg'
-  //          alt='user'
-  //        )
+          +e.list.--is-mobile
+            +e.item
+              +e.linl.link.--2md.--bold.--black.A(
+                href="#"
+              ) О магазине
+            +e.item
+              +e.linl.link.--2md.--bold.--black.A(
+                href="#"
+              ) Оплата и доставка
+            +e.item
+              +e.linl.link.--2md.--bold.--black.A(
+                href="#"
+              ) Дропшиппинг
+            +e.item
+              +e.linl.link.--2md.--bold.--black.A(
+                href="#"
+              ) Контакты
+
+        +b.icons
+          +e.social-container
+            +e.soc-wrapper.A(href='#')
+              +e.image.img.IMG(
+                src='../static/img/menu-icons/inst.svg'
+                alt='inst'
+              )
+
+          +e.functional-container
+            +b.search-block
+              +e.image-wrapper.icon-wrapper
+                +e.image.img.IMG(
+                  src='../static/img/menu-icons/search.svg'
+                  alt='search'
+                )
+            +e.image-wrapper.icon-wrapper
+              +e.image.img.IMG(
+                src='../static/img/menu-icons/cart.svg'
+                alt='cart'
+              )
+            +e.image-wrapper.icon-wrapper.A(href='#')
+              +e.image.img.IMG(
+                src='../static/img/menu-icons/user.svg'
+                alt='user'
+              )

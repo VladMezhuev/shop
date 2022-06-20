@@ -3,6 +3,7 @@
   top: 0
   left: 0
   w: 100%
+  z-index: 9999
 
   +mq-md
     pos: relative
@@ -15,8 +16,10 @@
   +d-justify
 
   +mq-lg
-    pa: 0 30px
     +d-ai-center
+
+  +mq-xl
+    pa: 0 30px
 
 .telephone-block
   w: 100%
@@ -83,44 +86,69 @@
   pos: relative
   w: 100%
   h: 70px
-  +d-justify
   pr: 10px
   pl: 10px
+  bg-color: white
+  +d-justify
 
-  +mq-lg
-    +d-ai-center
+  +mq-xl
     h: 104px
     pr: 30px
     pl: 30px
 
 .header-bottom-menu
-  pos: absolute
-  top: 100%
-  left: -100%
-  w: 100%
-  min-height: 100vh
-  height: 100%
-  bg-color: #EAEAEA
-  overflow: auto
   +d-ai-center
   +tr
+
+  +mq-till-lg
+    pos: absolute
+    top: 100%
+    left: -100%
+    w: 100%
+    h: calc(100vh - 118px)
+    bg-color: #EAEAEA
+    pa: 20px
+    overflow: auto
+
+  +mq-lg
+    bg-color: transparent
+    w: calc(100% - 194px)
+
+  +mq-fhd
+    w: calc(100% - 325px)
 
   &.is-active
     left: 0
   &__
-    &list
-      w: 100%
+    &wrapper
+      pos: relative
       h: 100%
+      w: 100%
       d: flex
-      ai: flex-start
-      flex-direction: column
-      pt: 80px
-      pl: 20px
+      jc: flex-end
+      flex-direction: column-reverse
 
       +mq-lg
         pt: 0
         pl: 0
         flex-direction: row
+        jc: space-between
+
+    &list
+      d: flex
+      ai: flex-start
+      flex-direction: column
+
+      +mq-lg
+        pt: 0
+        pl: 0
+        ai: center
+        flex-direction: row
+
+      &--
+        &is-mobile
+          +mq-md
+            d: none
 
     &image-wrapper
       +cube(18px)
@@ -140,7 +168,13 @@
       flex-direction: column
 
       +mq-lg
-        mb: 0
+        mb: 0px
+        mr: 30px
+
+      +mq-xl
+        mr: 50px
+
+      +mq-fhd
         mr: 80px
 
       +hover
@@ -215,26 +249,60 @@
 
 
 .logo
-  w: 194px
   h: 60px
 
   +mq-lg
+    h: 40px
+
+  +mq-xl
+    h: 50px
+    mr: 20px
+
+  +mq-fhd
+    h: 60px
     mr: 131px
 
 .icons
-  ml: auto
+  pos: relative
   +d-ai-center
+  pb: 20px
+  mb: 20px
+  br-b: 1px solid white
+
+  +mq-lg
+    pb: 0px
+    mb: 0
+    ml: auto
+    br: none
 
   &__
     &social-container
       mr: 36px
 
+      +mq-lg
+        mr: 20px
+
+      +mq-fhd
+        mr: 36px
+
     &soc-wrapper
-      +cube(50px)
-      pa: 13px
+      +cube(40px)
+      pa: 10px
       bg-color: black
       br-radius: 50%
       +pointer
+
+      +mq-lg
+        +cube(30px)
+        pa: 9px
+
+      +mq-xl
+        +cube(40px)
+        pa: 10px
+
+      +mq-fhd
+        +cube(50px)
+        pa: 13px
 
     &functional-container
       +d-ai-center
@@ -243,11 +311,23 @@
       ml: 16px
 
 .icon-wrapper
-  +cube(50px)
+  +cube(40px)
   br-radius: 50%
   bg-color: #F3F3F3
-  pa: 16px
+  pa: 12px
   +pointer
+
+  +mq-lg
+    +cube(30px)
+    pa: 10px
+
+  +mq-xl
+    +cube(40px)
+    pa: 12px
+
+  +mq-fhd
+    +cube(50px)
+    pa: 16px
 
 .menu-icon
   pos: relative
