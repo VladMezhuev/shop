@@ -1,20 +1,33 @@
 .main-top-section
   w: 100%
   h: 663px
+  pt: 118px
 
   &__
     &content
       +d-justify
+      flex-direction: column
       h: 100%
+
+      +mq-fhd
+        flex-direction: row
 
     &left-part
-      w: 61.5%
+      w: 100%
       h: 100%
-      mr: 6px
+
+      +mq-fhd
+        w: 61.5%
+        mr: 6px
 
     &right-part
-      w: 38.5%
-      h: 100%
+      d: none
+      w: 100%
+
+      +mq-fhd
+        w: 38.5%
+        h: 100%
+
 
     &right-top
       pb: 3px
@@ -30,10 +43,15 @@
   pos: relative
   w: 100%
   h: 100%
-  pt: 102px
-  pl: 103px
+  pt: 20px
+  pl: 15px
   d: flex
   jc: flex-start
+
+  +mq-fhd
+    pt: 102px
+    pl: 103px
+
 
   &__
     &image-wrapper
@@ -44,19 +62,29 @@
       h: 100%
       z-index: 1
 
+    &image
+      &--
+        &main
+          object-position: right !important
+
     &title
       mb: 26px
 
     &text-part
       pos: relative
       z-index: 2
-      w: 437px
+      w: 270px
+
+      +mq-xl
+        w: 437px
 
       &--
         &sm
           w: 225px
   .btn
-    mt: 106px
+    mt: 25px
+    +mq-xl
+      mt: 106px
   &--
     &rev
       jc: flex-end
@@ -66,10 +94,14 @@
       .btn
         mt: 94px
 
-
 .new-product-mark
   pos: absolute
-  bottom: 65px
-  right: 50px
-  +cube(221px)
+  bottom: 50px
+  right: 25px
+  +cube(100px)
   z-index: 2
+
+  +mq-fhd
+    +cube(221px)
+    bottom: 65px
+    right: 50px
